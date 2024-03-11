@@ -2,11 +2,11 @@
 # Metadapter - Event Logging
 ![NPM Version](https://img.shields.io/npm/v/metadatper-event)
 
-[Metadapter](https://github.com/sellersindustry/metadapter) Universal Adapter
+[Metadapter](https://github.com/sellersindustry/metadapter) universal adapter
 for event logging systems like PostHog. Implement interface for event logging
 and let your user choice which event logging service they utilize.
 
-> **Note**
+> [!IMPORTANT]
 > If you have a service you would like to support, please add it and make a pull request. It's super easy! *Please refrain from using additional libraries or it will make the code too bloated.*
 
 ## Features
