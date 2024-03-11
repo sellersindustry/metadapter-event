@@ -1,6 +1,6 @@
 
 # Metadapter - Event Logging
-![NPM Version](https://img.shields.io/npm/v/metadatper-event)
+![NPM Version](https://img.shields.io/npm/v/metadapter-event)
 
 [Metadapter](https://github.com/sellersindustry/metadapter) universal adapter
 for event logging systems like PostHog. Implement interface for event logging
