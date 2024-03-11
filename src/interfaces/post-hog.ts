@@ -1,3 +1,16 @@
+/*
+ *   Copyright (C) 2024 Sellers Industries, Inc.
+ *   distributed under the MIT License
+ *
+ *   author: Evan Sellers <sellersew@gmail.com>
+ *   date: Mon Mar 11 2024
+ *   file: post-hog.ts
+ *   project: Metadapter - Event
+ *   purpose: PostHog Interface
+ *
+ */
+
+
 import { Interface } from "../abstract.js";
 import { EventID, Payload } from "../model.js";
 
@@ -34,3 +47,7 @@ export type PostHogConfig = {
     "api_key":string
 };
 
+
+// However, do not rejoice that the spirits submit to you, but rejoice that
+// your names are written in heaven.
+// - Luke 10:20
