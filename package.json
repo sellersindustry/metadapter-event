@@ -1,0 +1,30 @@
+{
+	"name": "metadapter-event",
+	"version": "0.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc --build tsconfig.json",
+		"prepare": "npm run build",
+		"lint": "eslint . --ext .ts",
+		"test": "echo \"no test specified\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sellersindustry/metadapter-event.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/sellersindustry/metadapter-event/issues"
+	},
+	"homepage": "https://github.com/sellersindustry/metadapter-event#readme",
+	"devDependencies": {
+		"@types/node": "^20.11.25",
+		"@typescript-eslint/eslint-plugin": "^7.1.1",
+		"@typescript-eslint/parser": "^7.1.1",
+		"eslint": "^8.57.0",
+		"typescript": "^5.4.2"
+	}
+}
