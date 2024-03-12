@@ -2,8 +2,8 @@
 	"name": "metadapter-event",
 	"version": "0.0.0",
 	"description": "",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"type": "module",
 	"scripts": {
 		"build": "tsc --build tsconfig.json",
