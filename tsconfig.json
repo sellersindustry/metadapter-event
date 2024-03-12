@@ -1,17 +1,12 @@
 {
     "compilerOptions": {
-        "skipLibCheck": true,
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "target": "ESNext",
-        "isolatedModules": true,
+        "target": "es2022",
+        "module": "es2022",
+        "moduleResolution": "Node",
         "esModuleInterop": true,
-        "noEmit": true,
-        "allowImportingTsExtensions": true,
+        "sourceMap": true,
         "outDir": "dist",
-        "lib": [ "esnext" ],
-        "types": [ "node" ],
-        "baseUrl": "./",
+        "declaration": true
     },
     "exclude": [
         "node_modules",
