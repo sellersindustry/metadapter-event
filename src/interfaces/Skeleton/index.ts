@@ -29,8 +29,7 @@ export class Skeleton implements Interface {
 }
 
 
-// export type SkeletonConfig = undefined|null|Record<string, never>;
-export type SkeletonConfig = { foo:string };
+export type SkeletonConfig = undefined|null|Record<string, never>;
 
 
 // You are the light of the world. A town built on a hill cannot be hidden.
