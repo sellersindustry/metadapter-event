@@ -29,7 +29,7 @@ export type ConfigByType = {
     [Type.Skeleton]: SkeletonConfig
 };
 
-export type InitProperties<T extends Type=undefined> = {
+export type InitProperties<T extends Type=any> = {
     type: T;
     config: ConfigByType[T];
 };
