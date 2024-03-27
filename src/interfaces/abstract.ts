@@ -11,11 +11,11 @@
  */
 
 
-import { EventID, Payload } from "./model.js";
+import { EventID, Payload } from "../model.js";
 
 
 export interface Interface {
-    add(event:EventID, payload?:Payload, userID?:string):Promise<void>
+    add(event:EventID, payload?:Payload, userID?:string):Promise<void>|void
 }
 
 

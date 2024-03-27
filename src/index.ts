@@ -11,21 +11,22 @@
  */
 
 
-import { Interface } from "./abstract.js";
-import { PostHog, PostHogConfig } from "./interfaces/post-hog.js";
-import { Config, EventID, Payload, Type } from "./model.js";
+import { Interface } from "./interfaces/abstract.js";
+import { PostHog, PostHogConfig } from "./interfaces/PostHog/index.js";
+import { Skeleton, SkeletonConfig } from "./interfaces/Skeleton/index.js";
+import { ClassByType, Config, ConfigByType, EventID, Payload, Type } from "./model.js";
 
 
-export function EventInterface(type:Type, config:any):Interface {
-    if (type === Type.PostHog) {
-        return new PostHog(config);
+export function EventInterface<T extends Type>(type:T, config:ConfigByType[T]):Interface {
+    if (!Type[type]) {
+        throw new Error(`Type ${type.toString()} not supported.`);
     }
-    throw new Error(`Type ${type} not supported.`);
+    return new (ClassByType[type] as { new(config:ConfigByType[T]):Interface })(config);
 }
 
 
-export { Type, PostHog };
-export type { Payload, Config, EventID, PostHogConfig };
+export { Type, PostHog, Skeleton };
+export type { Payload, Config, EventID, PostHogConfig, SkeletonConfig };
 
 
 // I write these things to you who believe in the name of the Son of God so

@@ -4,7 +4,7 @@
  *
  *   author: Evan Sellers <sellersew@gmail.com>
  *   date: Mon Mar 11 2024
- *   file: post-hog.ts
+ *   file: index.ts
  *   project: Metadapter - Event
  *   purpose: PostHog Interface
  *
@@ -12,7 +12,7 @@
 
 
 import { Interface } from "../abstract.js";
-import { EventID, Payload } from "../model.js";
+import { EventID, Payload } from "../../model.js";
 
 
 export class PostHog implements Interface {
