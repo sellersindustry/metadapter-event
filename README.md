@@ -54,14 +54,6 @@ EventInterface(Type.PostHog, { "api_key": "***" });
 // Specify Type w/ String
 EventInterface(Type["PostHog"], { "api_key": "***" });
 
-// Specify By Properties
-EventInterfaceByProperties({
-    type: Type.PostHog,
-    config: {
-        api_key: ""
-    }
-});
-
 // Specify Type w/ Class
 PostHog({ "api_key": "***" });
 ```

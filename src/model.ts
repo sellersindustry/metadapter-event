@@ -14,30 +14,27 @@
 import { PostHog, PostHogConfig } from "./interfaces/PostHog/index.js";
 import { Skeleton, SkeletonConfig } from "./interfaces/Skeleton/index.js";
 
+
 export enum Type {
     PostHog = "PostHog",
     Skeleton = "Skeleton"
 }
+
 
 export const ClassByType = {
     [Type.PostHog]: PostHog,
     [Type.Skeleton]: Skeleton
 };
 
+
 export type ConfigByType = {
     [Type.PostHog]: PostHogConfig,
     [Type.Skeleton]: SkeletonConfig
 };
 
-export type InitProperties<T extends Type> = {
-    type: T;
-    config: ConfigByType[T];
-};
 
 export type Payload = Record<string, any>;
-
 export type Config  = Record<string, string|boolean|number>;
-
 export type EventID = string;
 
 
