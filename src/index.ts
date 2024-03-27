@@ -14,7 +14,7 @@
 import { Interface } from "./interfaces/abstract.js";
 import { PostHog, PostHogConfig } from "./interfaces/PostHog/index.js";
 import { Skeleton, SkeletonConfig } from "./interfaces/Skeleton/index.js";
-import { ClassByType, Config, ConfigByType, EventID, Payload, Type } from "./model.js";
+import { InitProperties, ClassByType, Config, ConfigByType, EventID, Payload, Type } from "./model.js";
 
 
 export function EventInterface<T extends Type>(type:T, config:ConfigByType[T]):Interface {
@@ -25,8 +25,13 @@ export function EventInterface<T extends Type>(type:T, config:ConfigByType[T]):I
 }
 
 
+export function EventInterfaceByProperties<T extends Type>(properties:InitProperties<T>):Interface {
+    return EventInterface(properties.type, properties.config);
+}
+
+
 export { Type, PostHog, Skeleton };
-export type { Payload, Config, EventID, PostHogConfig, SkeletonConfig };
+export type { Payload, Config, EventID, PostHogConfig, SkeletonConfig, InitProperties };
 
 
 // I write these things to you who believe in the name of the Son of God so
