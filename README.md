@@ -33,10 +33,12 @@ npm install metadapter-event
 
 
 ## Platforms
+The remapping allow remapping values from the payload to additional event
+properties on your platform.
 
 | Platform | Type | Config |
 |---|---|---|
-| [PostHog](https://posthog.com) | `PostHog` | `{ api_key:string }` |
+| [PostHog](https://posthog.com) | `PostHog` | `{ api_key:string, remapping?: { distinct_id?:string } }` |
 | Skeleton (Console for Prototyping) | `Skeleton` | `{}` or `undefined` |
 
 

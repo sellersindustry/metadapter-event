@@ -5,13 +5,14 @@
  *   author: Evan Sellers <sellersew@gmail.com>
  *   date: Mon Mar 11 2024
  *   file: index.ts
- *   project: Metadapter - Event
+ *   project: Metadapter - Events
  *   purpose: PostHog Interface
  *
  */
 
 
 import { Interface } from "../abstract.js";
+import { Remapping } from "../utilities.js";
 import { EventID, Payload } from "../../model.js";
 
 
@@ -25,7 +26,7 @@ export class PostHog implements Interface {
     }
 
 
-    async add(event:EventID, payload?:Payload, userID?:string):Promise<void> {
+    async add(event:EventID, payload?:Payload):Promise<void> {
         await fetch("https://app.posthog.com/capture", {
             method: "POST",
             headers: {
@@ -33,7 +34,7 @@ export class PostHog implements Interface {
             },
             body: JSON.stringify({
                 api_key: this.config.api_key,
-                distinct_id: userID,
+                distinct_id: Remapping("distinct_id", this.config.remapping, payload),
                 event: event,
                 properties: payload
             })
@@ -44,7 +45,10 @@ export class PostHog implements Interface {
 
 
 export type PostHogConfig = {
-    "api_key":string
+    api_key:string;
+    remapping?: {
+        distinct_id?:string;
+    };
 };
 
 

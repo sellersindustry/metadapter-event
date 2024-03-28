@@ -5,7 +5,7 @@
  *   author: Evan Sellers <sellersew@gmail.com>
  *   date: Mon Mar 11 2024
  *   file: model.ts
- *   project: Metadapter - Event
+ *   project: Metadapter - Events
  *   purpose: Models
  *
  */

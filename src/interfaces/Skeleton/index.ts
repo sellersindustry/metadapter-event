@@ -5,7 +5,7 @@
  *   author: Evan Sellers <sellersew@gmail.com>
  *   date: Wed Mar 27 2024
  *   file: index.ts
- *   project: Metadapter - Event
+ *   project: Metadapter - Events
  *   purpose: Skeleton Interface
  *
  */
@@ -19,8 +19,8 @@ export class Skeleton implements Interface {
 
     constructor() {}
 
-    add(event:EventID, payload?:Payload, userID?:string):void {
-        console.log(`[Metadapter Event] - ${event}${userID ? ` by user ${userID}` : ""}`);
+    add(event:EventID, payload?:Payload):void {
+        console.log(`[Metadapter Event] - ${event}`);
         if (payload) {
             console.log(`  ${JSON.stringify(payload)}`);
         }
